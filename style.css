@@ -7,34 +7,36 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* Dark data science themed background */
   background: url('https://images.unsplash.com/photo-1518773553398-650c184e0bb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
   background-size: cover;
-  color: #dcdcdc;
-  line-height: 1.6;
+  color: #ddd;
   position: relative;
   min-height: 100vh;
+  line-height: 1.6;
 }
 
-/* Dark overlay for better readability */
+/* Dark overlay */
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(15, 15, 30, 0.8);
+  background: rgba(15, 15, 30, 0.85);
   z-index: -1;
 }
 
+/* Links */
 a {
   color: #a287ff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
   color: #d1bbff;
+  text-decoration: underline;
 }
 
+/* Container */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -56,7 +58,7 @@ nav {
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
 .nav-logo {
@@ -75,7 +77,6 @@ nav {
   font-weight: 600;
   font-size: 1rem;
   color: #ccc;
-  transition: color 0.3s;
 }
 
 .nav-links li a:hover {
@@ -84,14 +85,13 @@ nav {
 
 /* Hero Section */
 #hero {
-  padding: 8rem 1rem 4rem; /* leave room for fixed nav */
+  padding: 8rem 1rem 4rem; /* space for fixed nav */
   text-align: center;
-  background: transparent;
   min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #dcdcdc;
+  color: #ddd;
 }
 
 #hero h1 {
@@ -104,7 +104,7 @@ nav {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #ddd;
+  color: #ccc;
 }
 
 .hero-links a {
@@ -127,8 +127,8 @@ nav {
 
 /* Sections */
 section {
-  padding: 4rem 0;
-  background: rgba(20, 20, 40, 0.7);
+  padding: 4rem 1rem;
+  background: rgba(20, 20, 40, 0.75);
   border-radius: 8px;
   margin-bottom: 2rem;
   color: #ddd;
@@ -143,7 +143,7 @@ h2 {
 
 /* Projects */
 .project {
-  background: rgba(40, 40, 70, 0.8);
+  background: rgba(40, 40, 70, 0.85);
   padding: 1.5rem 2rem;
   margin-bottom: 1.5rem;
   border-left: 5px solid #a287ff;
