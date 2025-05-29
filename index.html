@@ -2,24 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meenakshi Rajesh | Data Scientist</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
+  <nav>
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">Meenakshi Rajesh</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="container hero-content">
       <h1>Meenakshi Rajesh</h1>
       <p>Data Scientist | Machine Learning | Forecasting | Python | SQL</p>
-      <div class="links">
-        <a href="mailto:iammeenakshirajesh@gmail.com">Email</a>
+      <div class="hero-links">
+        <a href="mailto:iammeenakshirajesh@gmail.com" target="_blank">Email</a>
         <a href="https://github.com/Meenakshi-Rajesh" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/meenakshi-rajesh-27ba8b262" target="_blank">LinkedIn</a>
       </div>
     </div>
-  </header>
+  </section>
 
-  <section class="about">
+  <section id="about">
     <div class="container">
       <h2>About Me</h2>
       <p>
@@ -29,11 +41,11 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section id="projects">
     <div class="container">
       <h2>Projects</h2>
 
-      <div class="project">
+      <article class="project">
         <h3>🌡️ Global Temperature Prediction and Alert System</h3>
         <ul>
           <li>Built LSTM and Prophet models to forecast temperature anomalies using NASA GISS data.</li>
@@ -41,9 +53,9 @@
           <li>Created insightful visualizations to communicate trends in climate change.</li>
           <li><strong>Tools:</strong> Python, LSTM, Prophet, Matplotlib</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3>💬 LLM Sentiment Analysis on Amazon Reviews</h3>
         <ul>
           <li>Used BERT models via Hugging Face to perform sentiment classification.</li>
@@ -51,11 +63,11 @@
           <li>Visualized sentiment trends with Matplotlib and Seaborn.</li>
           <li><strong>Tools:</strong> Python, BERT, Hugging Face, Seaborn</li>
         </ul>
-      </div>
+      </article>
     </div>
   </section>
 
-  <section class="skills">
+  <section id="skills">
     <div class="container">
       <h2>Skills</h2>
       <div class="tags">
@@ -74,16 +86,28 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>📧 iammeenakshirajesh@gmail.com</p>
+      <p>📧 <a href="mailto:iammeenakshirajesh@gmail.com">iammeenakshirajesh@gmail.com</a></p>
       <p>📍 Luton, UK</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Meenakshi Rajesh. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Meenakshi Rajesh. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scrolling for nav links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+      });
+    });
+  </script>
 </body>
 </html>
